@@ -6,3 +6,7 @@ var errorMessage = null;
 var user = null;
 var s1 = 3;
 var s2 = s1;
+var someElement = document.querySelector('.foo');
+someElement.addEventListener('blur', function (e) {
+    console.log(e.target.value);
+});

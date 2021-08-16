@@ -18,3 +18,9 @@ let user: UserInterface | null = null
 
 let s1: number = 3
 let s2: string = s1 as unknown as string
+
+const someElement = document.querySelector ('.foo')
+
+someElement.addEventListener ('blur', (e: Event): void => {
+  console.log ((e.target as HTMLInputElement).value)
+})
