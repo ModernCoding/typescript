@@ -1,8 +1,29 @@
-let hello: string = "world"
+interface UserInterface {
+  name: string,
+  age?: number,
 
-const getFullName = (name: string, surname: string): string => {
-  return `${name} ${surname}`
+  getMessage (): string
 }
 
 
-console.log (getFullName ("true", "true"))
+const user: UserInterface = {
+  name: "Monster",
+  age: 30,
+
+  getMessage: () => {
+    return "Hello"
+  }
+}
+
+
+const user2: UserInterface = {
+  name: "Jack",
+  
+  getMessage: () => {
+    return "Hello"
+  }
+}
+
+
+console.log(user.name)
+console.log(user2.age)

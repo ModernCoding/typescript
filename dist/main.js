@@ -1,5 +1,15 @@
-var hello = "world";
-var getFullName = function (name, surname) {
-    return name + " " + surname;
+var user = {
+    name: "Monster",
+    age: 30,
+    getMessage: function () {
+        return "Hello";
+    }
 };
-console.log(getFullName("true", "true"));
+var user2 = {
+    name: "Jack",
+    getMessage: function () {
+        return "Hello";
+    }
+};
+console.log(user.name);
+console.log(user2.age);
