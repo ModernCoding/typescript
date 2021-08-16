@@ -4,3 +4,5 @@ var username = "alex";
 var pageName = "1";
 var errorMessage = null;
 var user = null;
+var s1 = 3;
+var s2 = s1;
