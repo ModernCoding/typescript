@@ -1,29 +1,17 @@
+type ID = string
+type PopularTag = string
+type MaybePopularTag = PopularTag | null
+
 interface UserInterface {
+  id: ID,
   name: string,
-  age?: number,
-
-  getMessage (): string
+  surname: string
 }
 
+const popularTags: PopularTag [] = [ 'dragon', 'coffee' ]
+const dragonsTag: MaybePopularTag = 'dragon'
 
-const user: UserInterface = {
-  name: "Monster",
-  age: 30,
-
-  getMessage: () => {
-    return "Hello"
-  }
-}
-
-
-const user2: UserInterface = {
-  name: "Jack",
-  
-  getMessage: () => {
-    return "Hello"
-  }
-}
-
-
-console.log(user.name)
-console.log(user2.age)
+let username: string = "alex"
+let pageName: string | number = "1"
+let errorMessage: string | null = null
+let user: UserInterface | null = null
