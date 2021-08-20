@@ -19,8 +19,51 @@ let errorMessage: string | null = null
 let s1: number = 3
 let s2: string = s1 as unknown as string
 
-const someElement = document.querySelector ('.foo')
+// const someElement = document.querySelector ('.foo')
 
-someElement.addEventListener ('blur', (e: Event): void => {
-  console.log ((e.target as HTMLInputElement).value)
-})
+// someElement.addEventListener ('blur', (e: Event): void => {
+//   console.log ((e.target as HTMLInputElement).value)
+// })
+
+
+const addId = <T extends object> (obj: T): T => {
+
+  const id: string = Math.random ().toString (16)
+
+  return {
+    ...obj,
+    id
+  }
+
+}
+
+
+interface UserInterface <T, V> {
+  name: string,
+  data: T,
+  meta: V
+}
+
+
+const user: UserInterface < { meta: string }, string > = {
+  
+  name: "Jack",
+  
+  data: {
+    meta: "foo"
+  },
+
+  meta: "bar"
+
+}
+
+
+const user2: UserInterface < string [], number > = {
+  name: "Jack",
+  data: ['foo'],
+  meta: 1
+}
+
+
+const result = addId <UserInterface <object, string>> (user)
+console.log (result)

@@ -1,42 +1,28 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var User = /** @class */ (function () {
-    function User(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.unchangeableName = firstName;
-    }
-    User.prototype.getFullname = function () {
-        return this.firstName + " " + this.lastName;
-    };
-    User.maxAge = 50;
-    return User;
-}());
-var Admin = /** @class */ (function (_super) {
-    __extends(Admin, _super);
-    function Admin() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Admin.prototype.setEditor = function (editor) {
-        this.editor = editor;
-    };
-    return Admin;
-}(User));
-var user = new User("Monster", "lessons");
-console.log(user.getFullname());
-console.log(User.maxAge);
-var admin = new Admin('Foo', 'Bar');
-console.log(admin.setEditor('toto'));
+// interface UserInterface {
+//   getFullname (): string
+// }
+// class User implements UserInterface {
+//   protected firstName: string
+//   private lastName: string
+//   readonly unchangeableName: string
+//   static readonly maxAge: number = 50
+//   constructor (firstName: string, lastName: string) {
+//     this.firstName = firstName
+//     this.lastName = lastName
+//     this.unchangeableName = firstName
+//   }
+//   getFullname = (): string => {
+//     return `${ this.firstName } ${ this.lastName }`
+//   }
+// }
+// class Admin extends User {
+//   private editor: string
+//   setEditor (editor: string): void {
+//     this.editor = editor
+//   }
+// }
+// const user: User = new User ("Monster", "lessons")
+// console.log (user.getFullname ())
+// console.log (User.maxAge)
+// const admin: Admin = new Admin ('Foo', 'Bar')
+// console.log (admin.setEditor ('toto'))
