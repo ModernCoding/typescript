@@ -67,3 +67,24 @@ const user2: UserInterface < string [], number > = {
 
 const result = addId <UserInterface <object, string>> (user)
 console.log (result)
+
+
+const statuses = {
+  notStarted: 0,
+  inProgress: 1,
+  done: 2,
+}
+
+
+enum Status {
+  NotStarted = "Not started",
+  InProgress = 1,
+  Done = 2,
+}
+
+
+let notStartedStatus: Status = Status.NotStarted
+console.log (notStartedStatus)
+
+notStartedStatus = 3
+console.log (notStartedStatus)

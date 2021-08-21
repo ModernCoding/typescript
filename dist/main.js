@@ -44,3 +44,18 @@ var user2 = {
 };
 var result = addId(user);
 console.log(result);
+var statuses = {
+    notStarted: 0,
+    inProgress: 1,
+    done: 2
+};
+var Status;
+(function (Status) {
+    Status["NotStarted"] = "Not started";
+    Status[Status["InProgress"] = 1] = "InProgress";
+    Status[Status["Done"] = 2] = "Done";
+})(Status || (Status = {}));
+var notStartedStatus = Status.NotStarted;
+console.log(notStartedStatus);
+notStartedStatus = 3;
+console.log(notStartedStatus);
